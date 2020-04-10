@@ -28,7 +28,7 @@ libraryDependencies ++= Seq(
   // "org.apache.spark" %% "spark-mllib" % sparkVersion,
 
   // spark packages
-  "graphframes" % "graphframes" % "0.4.0-spark2.1-s_2.11",
+  /* "graphframes" % "graphframes" % "0.4.0-spark2.1-s_2.11", */
 
   // testing
   "org.scalatest" %% "scalatest" % "2.2.4" % "test",
@@ -45,30 +45,30 @@ libraryDependencies ++= Seq(
 //////////
 
 // Your username to login to Databricks
-val dbcUsername = sys.env("DATABRICKSUSERNAME")
+/* val dbcUsername = sys.env("DATABRICKSUSERNAME") */
 
-// Your password (Can be set as an environment variable)
-val dbcPassword = sys.env("DATABRICKSPASSWORD")
-// Gotcha: Setting environment variables in IDE's may differ.
-// IDE's usually don't pick up environment variables from .bash_profile or .bashrc
+/* // Your password (Can be set as an environment variable) */
+/* val dbcPassword = sys.env("DATABRICKSPASSWORD") */
+/* // Gotcha: Setting environment variables in IDE's may differ. */
+/* // IDE's usually don't pick up environment variables from .bash_profile or .bashrc */
 
-// The URL to the Databricks REST API
-val dbcApiUrl = "https://your-sub-domain.cloud.databricks.com/api/1.2"
+/* // The URL to the Databricks REST API */
+/* val dbcApiUrl = "https://your-sub-domain.cloud.databricks.com/api/1.2" */
 
-// Add any clusters that you would like to deploy your work to. e.g. "My Cluster"
-val dbcClusters = Seq("my-cluster")
-// Add "ALL_CLUSTERS" if you want to attach your work to all clusters
+/* // Add any clusters that you would like to deploy your work to. e.g. "My Cluster" */
+/* val dbcClusters = Seq("my-cluster") */
+/* // Add "ALL_CLUSTERS" if you want to attach your work to all clusters */
 
-// An optional parameter to set the location to upload your libraries to in the workspace
-// e.g. "/Shared/libraries"
-// This location must be an existing path and all folders must exist.
-// NOTE: Specifying this parameter is *strongly* recommended as many jars will be uploaded to your cluster.
-// Putting them in one folder will make it easy for your to delete all the libraries at once.
-// Default is "/"
-val dbcLibraryPath = "/Shared/Libraries"
+/* // An optional parameter to set the location to upload your libraries to in the workspace */
+/* // e.g. "/Shared/libraries" */
+/* // This location must be an existing path and all folders must exist. */
+/* // NOTE: Specifying this parameter is *strongly* recommended as many jars will be uploaded to your cluster. */
+/* // Putting them in one folder will make it easy for your to delete all the libraries at once. */
+/* // Default is "/" */
+/* val dbcLibraryPath = "/Shared/Libraries" */
 
-// Whether to restart the clusters everytime a new version is uploaded to Databricks.
-val dbcRestartOnAttach = false // Default true
+/* // Whether to restart the clusters everytime a new version is uploaded to Databricks. */
+/* val dbcRestartOnAttach = false // Default true */
 
 //////////
 ///// END Databricks Settings
