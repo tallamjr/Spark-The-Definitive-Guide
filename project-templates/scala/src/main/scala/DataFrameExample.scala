@@ -1,6 +1,6 @@
 package com.databricks.example
 
-import org.apache.log4j.Logger
+import org.apache.log4j.{Logger, Level}
 import org.apache.spark.sql.SparkSession
 
 
@@ -15,6 +15,8 @@ object DFUtils extends Serializable {
 
 object DataFrameExample extends Serializable {
   def main(args: Array[String]) = {
+
+    Logger.getLogger("org").setLevel(Level.ERROR)
 
     val spark = SparkSession
       .builder()
