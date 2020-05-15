@@ -1,6 +1,6 @@
 # Spark: The Definitive Guide
 
-This is the central repository for all materials related to [Spark: The Definitive Guide](http://shop.oreilly.com/product/0636920034957.do) by Bill Chambers and Matei Zaharia. 
+This is the central repository for all materials related to [Spark: The Definitive Guide](http://shop.oreilly.com/product/0636920034957.do) by Bill Chambers and Matei Zaharia.
 
 *This repository is currently a work in progress and new material will be added over time.*
 
@@ -48,3 +48,10 @@ Now you just need to simply run the notebooks! All the examples run on Databrick
 
 Rather than you having to upload all of the data yourself, you simply have to change the path in each chapter from `/data` to `/databricks-datasets/definitive-guide/data`. Once you've done that, all examples should run without issue. You can use find and replace to do this very efficiently.
 
+### Run project locally with `spark-submit` and `sbt`
+
+
+```bash
+$ sbt clean compile package
+$ spark-submit --class com.databricks.example.StreamingExample target/scala-2.11/example_2.11-0.1-SNAPSHOT.jar
+```
